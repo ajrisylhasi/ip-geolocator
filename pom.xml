@@ -8,9 +8,9 @@
     <description>Java class library for obtaining geolocation information of an IP address.</description>
     <developers>
         <developer>
-            <id>jeszy</id>
-            <name>Péter Jeszenszky</name>
-            <email>jeszenszky.peter@inf.unideb.hu</email>
+            <id>ajrisylhasi</id>
+            <name>Ajri Sylhasi</name>
+            <email>ajrisylhasi@gmail.com</email>
             <organization>Faculty of Informatics, University of Debrecen</organization>
             <organizationUrl>http://www.inf.unideb.hu/</organizationUrl>
         </developer>
@@ -110,6 +110,33 @@
                         <link>https://javadoc.io/doc/io.github.openfeign/feign-core/${feign.version}/</link>
                     </links>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.16.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.9.0</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependency-updates-report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.5.3.0</version>
             </plugin>
         </plugins>
     </reporting>
